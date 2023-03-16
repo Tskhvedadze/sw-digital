@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Card.scss'
 
-export const Card = ({ imageUrl, lastName, name, prefix, title }) => {
+export const Card = ({ imageUrl, name, lastName, prefix, title }) => {
     return (
         <div className='list__item'>
             <div className='list__item--content'>
