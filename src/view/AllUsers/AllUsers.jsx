@@ -1,9 +1,16 @@
-import React from 'react'
+import { useState } from 'react'
+import usePosts from '../../hooks/usePosts'
+
+import { Card, Wrapper } from '../../components'
 
 import './AllUsers.scss'
 
 function AllUsers() {
-    return <div>AllUsers</div>
+    return (
+        <Wrapper>
+            <Card />
+        </Wrapper>
+    )
 }
 
 export default AllUsers

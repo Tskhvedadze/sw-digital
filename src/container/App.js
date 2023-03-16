@@ -1,29 +1,9 @@
 import React from 'react'
 
-import { Card, Wrapper } from '../components'
+import AllUsers from '../view/AllUsers/AllUsers'
 
 function App() {
-    return (
-        <Wrapper>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-        </Wrapper>
-    )
+    return <AllUsers />
 }
 
 export default App

@@ -2,22 +2,20 @@ import React from 'react'
 
 import './Card.scss'
 
-export const Card = () => {
+export const Card = ({ imageUrl, lastName, name, prefix, title }) => {
     return (
         <div className='list__item'>
             <div className='list__item--content'>
                 <img
                     className='content--image'
-                    src='http://placeimg.com/640/480/animals?v=1'
-                    alt='Jazmin Abernathy'
+                    src={imageUrl}
+                    alt={`${name}${lastName}`}
                 />
                 <div>
                     <h2 className='list__item--description '>
-                        Mrs. Jazmin Abernathy
+                        {`${prefix} ${name} ${lastName}`}
                     </h2>
-                    <p className='list__item--description '>
-                        Corporate Markets Director
-                    </p>
+                    <p className='list__item--description '>{title}</p>
                 </div>
             </div>
         </div>
