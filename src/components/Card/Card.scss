@@ -1,0 +1,22 @@
+@import '../../styles/main.scss';
+
+.list__item {
+    width: 25%;
+    &--content {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        border: 1px solid $color-grey;
+        cursor: pointer;
+    }
+
+    .content--image {
+        width: 100%;
+    }
+
+    &--description {
+        padding: 0.2rem 1rem;
+        font-size: $default-font-size;
+        color: $color-black-1;
+    }
+}
