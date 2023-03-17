@@ -1,13 +1,25 @@
+import { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 
-import useDataFetching from '../../hooks/useDataFetching'
+import useHandleScroll from '../../hooks/useHandleScroll'
+import useDataFetch from '../../hooks/useDataFetch'
 
 import { Card, Loading, Wrapper, Error } from '../../components'
 
 import './AllUsers.scss'
 
 function AllUsers() {
-    const { data, isLoading, error } = useDataFetching()
+    const { handleScroll, page, size } = useHandleScroll()
+    const { data, isLoading, error } = useDataFetch(
+        `http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${page}/${size}`,
+        size,
+        page,
+    )
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     return (
         <>

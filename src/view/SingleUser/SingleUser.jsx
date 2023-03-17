@@ -31,8 +31,7 @@ function SingleUser() {
             </div>
             <div className='container__body'>
                 <div className='container__body--links'>
-                    {/* <a href={`${param.id}`}>user</a> */}
-                    <NavLink to={`/${param.id}`}>user</NavLink>
+                    <a href={`${param.id}`}>user</a>
                 </div>
                 <h2 className='container__body--title'>Friends:</h2>
             </div>
