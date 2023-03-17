@@ -19,7 +19,7 @@ const useDataFetch = (url, size, page) => {
                     setData((prevData) => [...prevData, ...newData.list])
                     setError(false)
                 } else {
-                    throw new Error(newData.message || 'Somethin Went Wrong')
+                    throw new Error(newData.message || 'Something Went Wrong')
                 }
             } catch (err) {
                 console.error('Error', err.message)
