@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 import useDataFetching from '../../hooks/useDataFetching'
 
 import { Card, Loading, Wrapper, Error } from '../../components'
@@ -15,11 +17,9 @@ function AllUsers() {
                     const imageUrl = `${content.imageUrl}?${index}`
                     const contentID = `${content.id}?${index}`
                     return (
-                        <Card
-                            key={contentID}
-                            {...content}
-                            imageUrl={imageUrl}
-                        />
+                        <NavLink to={`/user/${index + 1}`} key={contentID}>
+                            <Card {...content} imageUrl={imageUrl} />
+                        </NavLink>
                     )
                 })}
             </Wrapper>
