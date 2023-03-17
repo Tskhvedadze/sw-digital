@@ -17,7 +17,11 @@ function AllUsers() {
                     const imageUrl = `${content.imageUrl}?${index}`
                     const contentID = `${content.id}?${index}`
                     return (
-                        <NavLink to={`/user/${index + 1}`} key={contentID}>
+                        <NavLink
+                            className='nav'
+                            to={`/user/${index + 1}`}
+                            key={contentID}
+                        >
                             <Card {...content} imageUrl={imageUrl} />
                         </NavLink>
                     )
