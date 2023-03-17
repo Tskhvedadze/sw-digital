@@ -29,7 +29,6 @@ const useDataFetch = (url, size, page) => {
         if (isLoading) {
             fetchData()
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [size, page])
 
     return { data, isLoading, error }

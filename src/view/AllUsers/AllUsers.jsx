@@ -23,23 +23,26 @@ function AllUsers() {
 
     return (
         <>
-            {error && <Error />}
-            <Wrapper>
-                {data.map((content, index) => {
-                    const imageUrl = `${content.imageUrl}?${index}`
-                    const contentID = `${content.id}?${index}`
-                    return (
-                        <NavLink
-                            className='nav'
-                            to={`/user/${index + 1}`}
-                            key={contentID}
-                        >
-                            <Card {...content} imageUrl={imageUrl} />
-                        </NavLink>
-                    )
-                })}
-            </Wrapper>
-            {isLoading && <Loading />}
+            {error ? (
+                <Error />
+            ) : (
+                <Wrapper>
+                    {data.map((content, index) => {
+                        const imageUrl = `${content.imageUrl}?${index}`
+                        const contentID = `${content.id}?${index}`
+                        return (
+                            <NavLink
+                                className='nav'
+                                to={`/user/${index + 1}`}
+                                key={contentID}
+                            >
+                                <Card {...content} imageUrl={imageUrl} />
+                            </NavLink>
+                        )
+                    })}
+                </Wrapper>
+            )}
+            {isLoading && !error && <Loading />}
         </>
     )
 }
