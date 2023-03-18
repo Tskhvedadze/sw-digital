@@ -1,7 +1,7 @@
 @import '../../styles/main.scss';
 
 .list__item {
-    width: 100%;
+    width: auto;
     &--content {
         display: flex;
         flex-direction: column;

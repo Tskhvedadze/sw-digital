@@ -11,16 +11,4 @@
             @content;
         }
     }
-    @if $breakpoint == tab-land {
-        // 1200px
-        @media (max-width: 75em) {
-            @content;
-        }
-    }
-    @if $breakpoint == big-desktop {
-        // 1800px
-        @media (min-width: 112.5em) {
-            @content;
-        }
-    }
 }

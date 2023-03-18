@@ -9,6 +9,14 @@
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
+
+    @include respond(tab-port) {
+        font-size: 80%;
+    }
+
+    @include respond(phone) {
+        font-size: 100%;
+    }
 }
 
 body {
