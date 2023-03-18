@@ -5,7 +5,8 @@ import useHandleScroll from '../../hooks/useHandleScroll'
 
 import { Card, Wrapper, Loading, Error } from '../../components'
 
-function FriendList({ userID }) {
+function FriendList({ userID }, onFriendClick) {
+    // console.log(onFriendClick)
     const { handleScroll, page, size } = useHandleScroll()
     const { data, isLoading, error } = useDataFetch(
         `http://sweeftdigital-intern.eu-central-1.elasticbeanstalk.com/user/${userID}/friends/${page}/${size}`,

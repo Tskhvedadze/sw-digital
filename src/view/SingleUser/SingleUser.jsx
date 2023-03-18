@@ -31,7 +31,12 @@ function SingleUser() {
             </div>
             <div className='container__body'>
                 <div className='container__body--links'>
-                    <a href={`${userID}`}>user</a>
+                    {singleUser &&
+                        singleUser.map((user) => (
+                            <span className='container__body--text'>
+                                {user.prefix} {user.name} {user.lastName}
+                            </span>
+                        ))}
                 </div>
                 <h2 className='container__body--title'>Friends:</h2>
                 <FriendList userID={userID} />
